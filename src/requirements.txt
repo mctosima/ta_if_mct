@@ -1,0 +1,6 @@
+# Python dependencies
+# Fill in as your project grows.
+# Run: pip freeze > requirements.txt before submission.
+numpy
+pandas
+matplotlib
