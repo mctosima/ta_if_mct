@@ -31,19 +31,42 @@
 
 ---
 
-## 📖 Table of Contents
-
-- [About](#-about)
-- [Repository Structure](#-repository-structure)
-- [Getting Started](#-getting-started)
-- [Reproducing Experiments](#-reproducing-experiments)
-- [Thesis Build](#-thesis-build)
-- [Review Process](#-review-process)
-- [Citation](#-citation)
+> **⚠️ IMPORTANT — Before you start working, make sure you have done all three:**
+>
+> 1. **Set your repository to Private.**
+>    Go to **Settings → Danger Zone → Change repository visibility → Make private**.
+>    Your thesis code and data must not be publicly visible.
+>
+> 2. **Transfer ownership to the MCT organization.**
+>    Go to **Settings → Danger Zone → Transfer ownership** and transfer to the `mctosima` organization.
+>    Your repo must live under MCT for supervision and archival.
+>
+> 3. **Use the correct repository name format.**
+>    ```
+>    github.com/[your-username]/ta_if_{your-call-name}_{your-student-id}
+>    ```
+>    Examples:
+>    - `github.com/johndoe/ta_if_john_12345678`
+>    - `github.com/janedoe/ta_if_jane_23456789`
+>    - `github.com/budi/ta_if_budi_34567890`
+>
+>    Replace `{your-call-name}` with your first name or nickname, and `{your-student-id}` with your student ID number. Do **not** use spaces or special characters.
 
 ---
 
-## 🔍 About
+## Table of Contents
+
+- [About](#about)
+- [Repository Structure](#repository-structure)
+- [Getting Started](#getting-started)
+- [Reproducing Experiments](#reproducing-experiments)
+- [Thesis Build](#thesis-build)
+- [Review Process](#review-process)
+- [Citation](#citation)
+
+---
+
+## About
 
 This repository contains the code, data, and LaTeX source for my undergraduate thesis
 at **[Institution Name]**.
@@ -56,7 +79,7 @@ at **[Institution Name]**.
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ta_if_mct/
@@ -76,7 +99,7 @@ ta_if_mct/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -86,8 +109,8 @@ ta_if_mct/
 ### Installation
 
 ```bash
-git clone https://github.com/USER/ta_if_mct.git
-cd ta_if_mct
+git clone https://github.com/[your-username]/ta_if_{call_name}_{student_id}.git
+cd ta_if_{call_name}_{student_id}
 python -m venv .venv
 source .venv/bin/activate
 pip install -r src/requirements.txt
@@ -95,7 +118,7 @@ pip install -r src/requirements.txt
 
 ---
 
-## 🔄 Reproducing Experiments
+## Reproducing Experiments
 
 <!-- TODO: Replace with actual commands -->
 
@@ -106,7 +129,7 @@ python main.py
 
 ---
 
-## 📄 Thesis Build
+## Thesis Build
 
 ```bash
 cd thesis
@@ -115,7 +138,7 @@ latexmk -pdf main.tex
 
 ---
 
-## 👀 Review Process
+## Review Process
 
 This repository is supervised. Reviews happen on a regular schedule:
 
@@ -128,7 +151,7 @@ AI agents assist review via the protocol documented in [AGENTS.md](AGENTS.md).
 
 ---
 
-## 📚 Citation
+## Citation
 
 ```bibtex
 @thesis{yourname2025ta,
@@ -137,112 +160,12 @@ AI agents assist review via the protocol documented in [AGENTS.md](AGENTS.md).
   year      = {2025},
   school    = {Your Institution},
   type      = {Undergraduate Thesis},
-  url       = {https://github.com/USER/ta_if_mct}
+  url       = {https://github.com/[your-username]/ta_if_{call_name}_{student_id}}
 }
 ```
 
 ---
 
-## 📝 License
+## License
 
 <!-- Choose and add a LICENSE file -->
-
----
-
----
-
-## 🇮🇩 Tentang
-
-Repositori ini berisi kode, data, dan sumber LaTeX untuk Tugas Akhir (S1) di
-**[Nama Institusi]**.
-
-**Pertanyaan Penelitian:** [Pertanyaan penelitian utama Anda]
-
-**Metodologi:** [Deskripsi singkat]
-
-**Temuan Utama:** [Ringkasan singkat]
-
----
-
-## 📁 Struktur Repositori
-
-```
-ta_if_mct/
-├── AGENTS.md                 ← Instruksi untuk AI agent (review otomatis)
-├── README.md                 ← File ini
-├── CHANGELOG.md              ← Riwayat versi
-│
-├── reviews/                  ← Catatan sesi review dosen pembimbing
-│
-├── thesis/                   ← Sumber LaTeX tesis
-├── code/                     ← Entry point kode utama
-├── src/                      ← Modul kode sumber
-├── results/                  ← Output: gambar, tabel, log eksperimen
-├── references/               ← Daftar pustaka & catatan bacaan
-└── docs/                     ← Catatan metodologi & dokumen pendukung
-```
-
----
-
-## 🚀 Memulai
-
-### Prasyarat
-
-- Python 3.10+
-- Distribusi LaTeX ([TeX Live](https://tug.org/texlive/) atau [MiKTeX](https://miktex.org/))
-
-### Instalasi
-
-```bash
-git clone https://github.com/USER/ta_if_mct.git
-cd ta_if_mct
-python -m venv .venv
-source .venv/bin/activate
-pip install -r src/requirements.txt
-```
-
----
-
-## 🔄 Mereproduksi Eksperimen
-
-```bash
-cd code
-python main.py
-```
-
----
-
-## 📄 Membangun Tesis
-
-```bash
-cd thesis
-latexmk -pdf main.tex
-```
-
----
-
-## 👀 Proses Review
-
-Repositori ini diawasi oleh dosen pembimbing. Review dilakukan secara berkala:
-
-1. Pembimbing me-review commit terbaru
-2. Temuan dicatat di `reviews/YYYY-MM-DD_review_NN.md`
-3. Setiap temuan diberi tingkat keparahan: 🔴 Penghalang / 🟡 Perlu Perhatian / 🟢 Minor
-4. Item 🔴 harus diselesaikan sebelum review berikutnya
-
-AI agent membantu review melalui protokol yang terdokumentasi di [AGENTS.md](AGENTS.md).
-
----
-
-## 📚 Sitasi
-
-```bibtex
-@thesis{yourname2025ta,
-  title     = {Judul Tesis Anda},
-  author    = {Nama Anda},
-  year      = {2025},
-  school    = {Institusi Anda},
-  type      = {Tugas Akhir},
-  url       = {https://github.com/USER/ta_if_mct}
-}
-```
